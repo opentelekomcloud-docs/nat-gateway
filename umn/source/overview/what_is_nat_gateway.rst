@@ -18,7 +18,6 @@ NAT Gateway supports source NAT (SNAT) and destination NAT (DNAT).
    .. figure:: /_static/images/en-us_image_0201532914.png
       :alt: **Figure 1** SNAT architecture
 
-
       **Figure 1** SNAT architecture
 
 -  DNAT enables servers in a VPC to share an EIP to provide services accessible from the Internet through IP address mapping or port mapping.
@@ -29,6 +28,5 @@ NAT Gateway supports source NAT (SNAT) and destination NAT (DNAT).
 
    .. figure:: /_static/images/en-us_image_0201532822.png
       :alt: **Figure 2** DNAT architecture
-
 
       **Figure 2** DNAT architecture
