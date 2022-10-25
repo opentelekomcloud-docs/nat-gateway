@@ -34,7 +34,6 @@ Procedure
    .. figure:: /_static/images/en-us_image_0201532881.png
       :alt: **Figure 1** Add SNAT Rule
 
-
       **Figure 1** Add SNAT Rule
 
 6. Configure the parameters as prompted. For details, see :ref:`Table 1 <nat_qs_0017__table4272024117597>`.

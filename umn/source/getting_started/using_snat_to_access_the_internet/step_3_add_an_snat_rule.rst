@@ -34,7 +34,6 @@ Procedure
    .. figure:: /_static/images/en-us_image_0201532851.png
       :alt: **Figure 1** Add SNAT Rule
 
-
       **Figure 1** Add SNAT Rule
 
 #. Configure the parameters as prompted. :ref:`Table 1 <nat_qs_0004__table1966804261617>` describes the parameters.

@@ -12,5 +12,4 @@ If servers in your data center need to access the Internet or to provide service
 .. figure:: /_static/images/en-us_image_0201532894.png
    :alt: **Figure 1** Flowchart
 
-
    **Figure 1** Flowchart

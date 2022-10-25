@@ -17,7 +17,6 @@ If your servers in a VPC require Internet access, you can use SNAT to let the se
 .. figure:: /_static/images/en-us_image_0201532867.png
    :alt: **Figure 1** Using SNAT to access the Internet
 
-
    **Figure 1** Using SNAT to access the Internet
 
 Using DNAT to Allow Servers to Provide Services Accessible from the Internet
@@ -36,7 +35,6 @@ A DNAT rule is configured for one server. If there are multiple servers, you can
 .. figure:: /_static/images/en-us_image_0201532856.png
    :alt: **Figure 2** Using DNAT to allow servers to provide services accessible from the Internet
 
-
    **Figure 2** Using DNAT to allow servers to provide services accessible from the Internet
 
 Using SNAT or DNAT to Communicate with the Internet at a High Speed
@@ -50,6 +48,5 @@ If a large number of servers in a private cloud or those connect to a VPC throug
 
 .. figure:: /_static/images/en-us_image_0201532887.png
    :alt: **Figure 3** Using SNAT or DNAT to communicate with the Internet at a high speed
-
 
    **Figure 3** Using SNAT or DNAT to communicate with the Internet at a high speed
