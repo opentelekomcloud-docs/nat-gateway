@@ -12,5 +12,4 @@ If servers (ECSs and BMSs) without EIPs bound need to access the Internet, the s
 .. figure:: /_static/images/en-us_image_0201532815.png
    :alt: **Figure 1** Flowchart
 
-
    **Figure 1** Flowchart

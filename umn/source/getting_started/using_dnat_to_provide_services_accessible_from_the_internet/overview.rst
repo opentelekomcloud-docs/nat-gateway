@@ -12,5 +12,4 @@ When one or more servers (ECSs and BMSs) in a VPC are required to provide servic
 .. figure:: /_static/images/en-us_image_0201532834.png
    :alt: **Figure 1** Flowchart
 
-
    **Figure 1** Flowchart
