@@ -93,7 +93,7 @@ html_static_path = ['_static']
 
 # -- Options for PDF output --------------------------------------------------
 latex_documents = [
-('index',
+    ('index',
      'natgw-umn.tex',
      u'NAT Gateway - User Guide',
      u'OpenTelekomCloud', 'manual'),
