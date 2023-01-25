@@ -15,7 +15,7 @@ NAT Gateway
    :maxdepth: 1
    :hidden: 
 
-   what_is_the_relationship_between_a_vpc,_nat_gateway,_eip_bandwidth,_and_ecs
+   what_is_the_relationship_between_a_vpc_nat_gateway_eip_bandwidth_and_ecs
    how_does_a_nat_gateway_offer_high_availability
    what_are_the_differences_between_using_a_nat_gateway_and_using_an_eip_for_an_ecs
    what_is_the_quota_of_the_nat_gateway
