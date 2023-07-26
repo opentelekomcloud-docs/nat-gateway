@@ -13,4 +13,4 @@ Create a Direct Connect connection for connecting a VPC to your data center befo
 Procedure
 ---------
 
-For details on how to enable Direct Connect, see the *Enabling Direct Connect* in the *Direct Connect User Guide*. If you enable Direct Connect in self-service mode, you are advised to set the VPC CIDR block to **0.0.0.0/0**.
+For details on how to enable Direct Connect, see the `Enabling Direct Connect <https://docs.otc.t-systems.com/direct-connect/umn/>`__ in the *Direct Connect User Guide*. If you enable Direct Connect in self-service mode, you are advised to set the VPC CIDR block to **0.0.0.0/0**.

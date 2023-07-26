@@ -5,4 +5,4 @@
 Do the NAT Gateway and SNAT Rule Support the Update Operation?
 ==============================================================
 
-NAT gateways can be updated. SNAT rules cannot be updated.
+NAT gateways can be updated, and SNAT rules cannot be updated.

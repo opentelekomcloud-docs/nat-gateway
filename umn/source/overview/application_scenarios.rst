@@ -5,19 +5,19 @@
 Application Scenarios
 =====================
 
-Using SNAT to Access the Internet
----------------------------------
+Using SNAT to Enable Servers to Access the Internet
+---------------------------------------------------
 
-If your servers in a VPC require Internet access, you can use SNAT to let the servers share one or more EIPs to access the Internet without exposing their IP addresses. In a VPC, each subnet corresponds to an SNAT rule, and each SNAT rule is configured with an EIP. NAT Gateway provides different types of NAT gateways that support different numbers of connections. You can create multiple SNAT rules to meet your service requirements.
+If your servers in a VPC require Internet access, you can use SNAT to let the servers share one or more EIPs to access the Internet without exposing their IP addresses. In a VPC, each subnet corresponds to an SNAT rule, and each SNAT rule is configured with an EIP. NAT Gateway provides different specifications to support different numbers of connections. You can create multiple SNAT rules to meet your service requirements.
 
 :ref:`Figure 1 <nat_pro_0002__fig1463533919456>` shows how servers in a VPC access the Internet using SNAT.
 
 .. _nat_pro_0002__fig1463533919456:
 
 .. figure:: /_static/images/en-us_image_0201532867.png
-   :alt: **Figure 1** Using SNAT to access the Internet
+   :alt: **Figure 1** Using SNAT to enable servers to access the Internet
 
-   **Figure 1** Using SNAT to access the Internet
+   **Figure 1** Using SNAT to enable servers to access the Internet
 
 Using DNAT to Allow Servers to Provide Services Accessible from the Internet
 ----------------------------------------------------------------------------
@@ -28,7 +28,7 @@ You can associate an EIP with a DNAT rule. As requests with a specific protocol 
 
 A DNAT rule is configured for one server. If there are multiple servers, you can create several DNAT rules to make the servers share one or more EIPs.
 
-:ref:`Figure 2 <nat_pro_0002__fig1553173645114>` shows how servers in a VPC use DNAT to provide services accessible from the Internet. The servers shown in the following figure can be an ECS or BMS.
+:ref:`Figure 2 <nat_pro_0002__fig1553173645114>` shows how servers in a VPC use DNAT to provide services accessible from the Internet. Servers in the following figure can be an ECS or a BMS.
 
 .. _nat_pro_0002__fig1553173645114:
 

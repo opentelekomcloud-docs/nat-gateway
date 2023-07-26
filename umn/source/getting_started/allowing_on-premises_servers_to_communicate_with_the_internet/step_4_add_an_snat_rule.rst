@@ -24,14 +24,14 @@ Procedure
 
 2. Click |image1| in the upper left corner and select the desired region and project.
 
-3. Under **Network**, choose **NAT Gateway**.
+3. Under **Network**, select **NAT Gateway**.
 
 4. On the displayed page, click the name of the NAT gateway for which you want to add the SNAT rule.
 
 5. On the **SNAT Rules** tab, click **Add SNAT Rule**.
 
 
-   .. figure:: /_static/images/en-us_image_0201532881.png
+   .. figure:: /_static/images/en-us_image_0000001663069377.png
       :alt: **Figure 1** Add SNAT Rule
 
       **Figure 1** Add SNAT Rule
@@ -54,6 +54,8 @@ Procedure
       | EIP                               | The EIP used for accessing the Internet.                                                                                                                                                                                            |
       |                                   |                                                                                                                                                                                                                                     |
       |                                   | You can select an EIP that either is not bound to any resource, has been bound to a DNAT rule with **Port Type** set to **Specific port** of the current NAT gateway, or has been bound to an SNAT rule of the current NAT gateway. |
+      +-----------------------------------+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+      | Description                       | Supplementary information about the SNAT rule. The description can contain up to 255 characters.                                                                                                                                    |
       +-----------------------------------+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
 
 7. Click **OK**.

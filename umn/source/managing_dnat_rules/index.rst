@@ -7,6 +7,7 @@ Managing DNAT Rules
 
 -  :ref:`Adding a DNAT Rule <en-us_topic_0127489530>`
 -  :ref:`Viewing a DNAT Rule <nat_dnat_0001>`
+-  :ref:`Modifying a DNAT Rule <nat_dnat_0002>`
 -  :ref:`Deleting a DNAT Rule <nat_dnat_0003>`
 
 .. toctree::
@@ -15,4 +16,5 @@ Managing DNAT Rules
 
    adding_a_dnat_rule
    viewing_a_dnat_rule
+   modifying_a_dnat_rule
    deleting_a_dnat_rule

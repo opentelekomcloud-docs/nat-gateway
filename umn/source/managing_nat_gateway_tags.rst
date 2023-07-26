@@ -16,25 +16,17 @@ A tag consists of a key and value pair. :ref:`Table 1 <nat_tag_0000__ted9687ca14
 
 .. table:: **Table 1** Tag requirements
 
-   +-----------------------------------+---------------------------------------------------------------------+
-   | Parameter                         | Requirement                                                         |
-   +===================================+=====================================================================+
-   | Key                               | -  Cannot be left blank.                                            |
-   |                                   | -  Must be unique for each NAT gateway.                             |
-   |                                   | -  Contains a maximum of 36 characters.                             |
-   |                                   | -  Can contain only the following character types:                  |
-   |                                   |                                                                     |
-   |                                   |    -  Letter                                                        |
-   |                                   |    -  Digits                                                        |
-   |                                   |    -  Special characters, including hyphens (-) and underscores (_) |
-   +-----------------------------------+---------------------------------------------------------------------+
-   | Value                             | -  Can contain a maximum of 43 characters.                          |
-   |                                   | -  Can contain only the following character types:                  |
-   |                                   |                                                                     |
-   |                                   |    -  Letter                                                        |
-   |                                   |    -  Digits                                                        |
-   |                                   |    -  Special characters, including hyphens (-) and underscores (_) |
-   +-----------------------------------+---------------------------------------------------------------------+
+   +-----------------------------------+-----------------------------------------------------------------------------------+
+   | Parameter                         | Requirement                                                                       |
+   +===================================+===================================================================================+
+   | Key                               | -  Cannot be left blank.                                                          |
+   |                                   | -  Must be unique for each NAT gateway.                                           |
+   |                                   | -  Contains a maximum of 36 characters.                                           |
+   |                                   | -  Contains only letters, digits, hyphens (-), underscores (_), and at signs (@). |
+   +-----------------------------------+-----------------------------------------------------------------------------------+
+   | Value                             | -  Can contain a maximum of 43 characters.                                        |
+   |                                   | -  Contains only letters, digits, hyphens (-), underscores (_), and at signs (@). |
+   +-----------------------------------+-----------------------------------------------------------------------------------+
 
 Procedure
 ---------
@@ -53,7 +45,7 @@ Procedure
 
 #. Click **+** to specify additional tag keys and values.
 
-   You can add a maximum of ten tags to refine your search results. If you add more than one tag to search for NAT gateways, the tags are automatically joined with AND.
+   You can add a maximum of 20 tags to refine your search results. If you add more than one tag to search for NAT gateways, the tags are automatically joined with AND.
 
 #. Click **Search**.
 
@@ -78,7 +70,7 @@ Procedure
 
       .. note::
 
-         You can use the predefined tags as prompted to simplify tag adding operations. For details, see the *Tag Management Service User Guide*.
+         You can use the predefined tags as prompted to simplify tag adding operations. For more information about predefined tags, see the `Tag Management Service User Guide <https://docs.sc.otc.t-systems.com/tms/index.html>`__.
 
    -  Modify a tag.
 

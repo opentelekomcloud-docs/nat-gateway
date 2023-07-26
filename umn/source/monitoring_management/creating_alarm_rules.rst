@@ -23,6 +23,6 @@ Procedure
 
 .. note::
 
-   For more information about how to set alarm rules, see *Cloud Eye User Guide*.
+   For more information about how to set alarm rules, see the `Cloud Eye User Guide <https://docs.otc.t-systems.com/cloud-eye/umn/>`__.
 
 .. |image1| image:: /_static/images/en-us_image_0141273034.png
