@@ -22,7 +22,7 @@ POST /v2.0/snat_rules
 Request
 -------
 
-:ref:`Table 1 <nat_api_0006__table10267194320114>` describes the request parameters.
+:ref:`Table 1 <nat_api_0006__table10267194320114>` describes the request parameter.
 
 .. _nat_api_0006__table10267194320114:
 
@@ -38,31 +38,33 @@ Request
 
 .. table:: **Table 2** Description of the **snat_rule** field
 
-   +-----------------+-----------------+-----------------+------------------------------------------------------------------------------------------------------------------------------------------+
-   | Parameter       | Mandatory       | Type            | Description                                                                                                                              |
-   +=================+=================+=================+==========================================================================================================================================+
-   | nat_gateway_id  | Yes             | String          | Specifies the NAT gateway ID.                                                                                                            |
-   +-----------------+-----------------+-----------------+------------------------------------------------------------------------------------------------------------------------------------------+
-   | network_id      | No              | String          | Specifies the network ID used by the SNAT rule. This parameter and **cidr** are alternative.                                             |
-   +-----------------+-----------------+-----------------+------------------------------------------------------------------------------------------------------------------------------------------+
-   | cidr            | No              | String          | Specifies CIDR, which can be in the format of a network segment or a host IP address. This parameter and **network_id** are alternative. |
-   |                 |                 |                 |                                                                                                                                          |
-   |                 |                 |                 | If the value of **Source_type** is **0**, the CIDR block must be a subset of the VPC subnet CIDR block.                                  |
-   |                 |                 |                 |                                                                                                                                          |
-   |                 |                 |                 | If the value of **Source_type** is **1**, **cidr** must be a CIDR block of Direct Connect connection.                                    |
-   +-----------------+-----------------+-----------------+------------------------------------------------------------------------------------------------------------------------------------------+
-   | source_type     | No              | Integer         | **0**: Either **network_id** or **cidr** can be specified in a VPC.                                                                      |
-   |                 |                 |                 |                                                                                                                                          |
-   |                 |                 |                 | **1**: Only **cidr** can be specified over a Direct Connect connection.                                                                  |
-   |                 |                 |                 |                                                                                                                                          |
-   |                 |                 |                 | If no value is entered, the default value **0** (VPC) is used.                                                                           |
-   +-----------------+-----------------+-----------------+------------------------------------------------------------------------------------------------------------------------------------------+
-   | floating_ip_id  | Yes             | String          | Specifies the EIP ID. Multiple EIPs are separated using commas (,).                                                                      |
-   |                 |                 |                 |                                                                                                                                          |
-   |                 |                 |                 | The maximum length of the ID is 4096 bytes.                                                                                              |
-   |                 |                 |                 |                                                                                                                                          |
-   |                 |                 |                 | The number of EIP IDs cannot exceed 20.                                                                                                  |
-   +-----------------+-----------------+-----------------+------------------------------------------------------------------------------------------------------------------------------------------+
+   +-----------------+-----------------+-----------------+-------------------------------------------------------------------------------------------------------------------------------------------------------------+
+   | Parameter       | Mandatory       | Type            | Description                                                                                                                                                 |
+   +=================+=================+=================+=============================================================================================================================================================+
+   | nat_gateway_id  | Yes             | String          | Specifies the NAT gateway ID.                                                                                                                               |
+   +-----------------+-----------------+-----------------+-------------------------------------------------------------------------------------------------------------------------------------------------------------+
+   | network_id      | No              | String          | Specifies the network ID used by the SNAT rule. This parameter and **cidr** are alternative.                                                                |
+   +-----------------+-----------------+-----------------+-------------------------------------------------------------------------------------------------------------------------------------------------------------+
+   | cidr            | No              | String          | Specifies CIDR, which can be in the format of a network segment or a host IP address. This parameter and **network_id** are alternative.                    |
+   |                 |                 |                 |                                                                                                                                                             |
+   |                 |                 |                 | If **source_type** is set to **0**, **cidr** must be a subset of the VPC subnet.                                                                            |
+   |                 |                 |                 |                                                                                                                                                             |
+   |                 |                 |                 | If **source_type** is set to **1**, **cidr** must be a CIDR block of your on-premises network connected to the VPC through Direct Connect or Cloud Connect. |
+   +-----------------+-----------------+-----------------+-------------------------------------------------------------------------------------------------------------------------------------------------------------+
+   | source_type     | No              | Integer         | **0**: Either **network_id** or **cidr** can be specified in a VPC.                                                                                         |
+   |                 |                 |                 |                                                                                                                                                             |
+   |                 |                 |                 | **1**: Only **cidr** can be specified over a Direct Connect connection.                                                                                     |
+   |                 |                 |                 |                                                                                                                                                             |
+   |                 |                 |                 | If no value is entered, the default value **0** (VPC) is used.                                                                                              |
+   +-----------------+-----------------+-----------------+-------------------------------------------------------------------------------------------------------------------------------------------------------------+
+   | floating_ip_id  | Yes             | String          | Specifies the EIP ID. Use commas (,) to separate multiple IDs.                                                                                              |
+   |                 |                 |                 |                                                                                                                                                             |
+   |                 |                 |                 | The maximum length of the ID is 4,096 bytes.                                                                                                                |
+   |                 |                 |                 |                                                                                                                                                             |
+   |                 |                 |                 | Constraints: The number of EIP IDs cannot exceed 20.                                                                                                        |
+   +-----------------+-----------------+-----------------+-------------------------------------------------------------------------------------------------------------------------------------------------------------+
+   | description     | No              | String          | Provides supplementary information about the SNAT rule.                                                                                                     |
+   +-----------------+-----------------+-----------------+-------------------------------------------------------------------------------------------------------------------------------------------------------------+
 
 Response
 --------
@@ -102,17 +104,23 @@ Response
    |                       |                       |                                                                                                                                          |
    |                       |                       | If no value is entered, the default value **0** (VPC) is used.                                                                           |
    +-----------------------+-----------------------+------------------------------------------------------------------------------------------------------------------------------------------+
-   | floating_ip_id        | String(4096)          | -  Specifies the EIP ID. Multiple EIPs are separated using commas (,).                                                                   |
-   |                       |                       | -  The maximum length of the ID is 4096 bytes.                                                                                           |
+   | floating_ip_id        | String(4096)          | -  Specifies the EIP ID. Use commas (,) to separate multiple IDs.                                                                        |
+   |                       |                       | -  The maximum length of the ID is 4,096 bytes.                                                                                          |
    +-----------------------+-----------------------+------------------------------------------------------------------------------------------------------------------------------------------+
-   | floating_ip_address   | String(1024)          | -  Specifies the EIP. Multiple EIPs are separated using commas (,).                                                                      |
-   |                       |                       | -  The maximum length is 1024 bytes.                                                                                                     |
+   | floating_ip_address   | String(1024)          | -  Specifies the EIP. Use commas (,) to separate multiple EIPs.                                                                          |
+   |                       |                       | -  The maximum length is 1,024 bytes.                                                                                                    |
+   +-----------------------+-----------------------+------------------------------------------------------------------------------------------------------------------------------------------+
+   | freezed_ip_address    | String(1024)          | -  Specifies the frozen EIP. Use commas (,) to separate frozen EIPs.                                                                     |
+   |                       |                       | -  The maximum length is 1,024 bytes.                                                                                                    |
+   +-----------------------+-----------------------+------------------------------------------------------------------------------------------------------------------------------------------+
+   | description           | String                | Provides supplementary information about the SNAT rule.                                                                                  |
    +-----------------------+-----------------------+------------------------------------------------------------------------------------------------------------------------------------------+
    | status                | String                | -  Specifies the status of the SNAT rule.                                                                                                |
    |                       |                       | -  For details about all its values, see :ref:`Table 1 <nat_api_0042__table1390614366107>`.                                              |
    +-----------------------+-----------------------+------------------------------------------------------------------------------------------------------------------------------------------+
-   | admin_state_up        | Boolean               | -  Specifies whether the SNAT rule is enabled or disabled.                                                                               |
-   |                       |                       | -  The value can be:                                                                                                                     |
+   | admin_state_up        | Boolean               | -  Specifies the unfrozen or frozen state.                                                                                               |
+   |                       |                       | -  Specifies whether the SNAT rule is enabled or disabled.                                                                               |
+   |                       |                       | -  The state can be:                                                                                                                     |
    |                       |                       |                                                                                                                                          |
    |                       |                       |    -  **true**: The SNAT rule is enabled.                                                                                                |
    |                       |                       |    -  **false**: The SNAT rule is disabled.                                                                                              |
@@ -133,13 +141,14 @@ Examples
          {
              "snat_rule": {
                  "nat_gateway_id": "a78fb3eb-1654-4710-8742-3fc49d5f04f8",
+                 "description": "description",
                  "network_id": "eaad9cd6-2372-4be1-9535-9bd37210ae7b",
                  "source_type":0,
                  "floating_ip_id": "bdc10a4c-d81a-41ec-adf7-de857f7c812a"
              }
          }
 
-   2. Configure parameter **cider** in a VPC.
+   2. Configure parameter **cidr** in a VPC.
 
       .. code-block:: text
 
@@ -148,12 +157,13 @@ Examples
             "snat_rule": {
                   "nat_gateway_id": "a78fb3eb-1654-4710-8742-3fc49d5f04f8",
                   "cidr": "192.168.1.10/32",
+                  "description": "description",
                   "source_type":0,
                   "floating_ip_id": "bdc10a4c-d81a-41ec-adf7-de857f7c812a"
                }
            }
 
-   3. Configure parameter **cider** over a Direct Connect connection.
+   3. Configure parameter **cidr** over a Direct Connect connection.
 
       .. code-block:: text
 
@@ -162,6 +172,7 @@ Examples
                "snat_rule": {
                   "nat_gateway_id": "a78fb3eb-1654-4710-8742-3fc49d5f04f8",
                   "cidr": "172.30.0.0/24",
+                  "description": "description",
                   "source_type":1,
                   "floating_ip_id": "bdc10a4c-d81a-41ec-adf7-de857f7c812a"
                }
@@ -185,7 +196,9 @@ Examples
                   "tenant_id": "27e25061336f4af590faeabeb7fcd9a3",
                   "created_at": "2017-11-18 07:54:21.665430",
                   "id": "5b95c675-69c2-4656-ba06-58ff72e1d338",
-                  "floating_ip_address": "5.21.11.226"
+                  "floating_ip_address": "5.21.11.226",
+                  "freezed_ip_address": "",
+                  "description": "description"
               }
           }
 
@@ -204,7 +217,9 @@ Examples
                   "tenant_id": "27e25061336f4af590faeabeb7fcd9a3",
                   "created_at": "2017-11-18 07:54:21.665430",
                   "id": "5b95c675-69c2-4656-ba06-58ff72e1d338",
-                  "floating_ip_address": "5.21.11.226"
+                  "floating_ip_address": "5.21.11.226",
+                  "freezed_ip_address": "",
+                  "description": "description"
               }
           }
 
@@ -223,11 +238,13 @@ Examples
                   "tenant_id": "27e25061336f4af590faeabeb7fcd9a3",
                   "created_at": "2017-11-18 07:54:21.665430",
                   "id": "5b95c675-69c2-4656-ba06-58ff72e1d338",
-                  "floating_ip_address": "5.21.11.226"
+                  "floating_ip_address": "5.21.11.226",
+                  "freezed_ip_address": "",
+                  "description": "description"
               }
           }
 
-Status Code
------------
+Status Codes
+------------
 
 See :ref:`Status Codes <nat_api_0038>`.

@@ -84,7 +84,7 @@ Examples
      ]
    }
 
-Status Code
------------
+Status Codes
+------------
 
 See :ref:`Status Codes <nat_api_0038>`.

@@ -8,7 +8,7 @@ Querying SNAT Rules
 Function
 --------
 
-This API is used to query an SNAT rule list.
+This API is used to query SNAT rules.
 
 URI
 ---
@@ -46,11 +46,13 @@ GET /v2.0/snat_rules
    +---------------------+-----------------+-----------------+------------------------------------------------------------------------------------------------------------------------------------------+
    | floating_ip_address | No              | String(1024)    | Specifies the EIP.                                                                                                                       |
    +---------------------+-----------------+-----------------+------------------------------------------------------------------------------------------------------------------------------------------+
+   | description         | No              | String          | Provides supplementary information about the SNAT rule.                                                                                  |
+   +---------------------+-----------------+-----------------+------------------------------------------------------------------------------------------------------------------------------------------+
    | status              | No              | String          | -  Specifies the status of the SNAT rule.                                                                                                |
    |                     |                 |                 | -  For details about all its values, see :ref:`Table 1 <nat_api_0042__table1390614366107>`.                                              |
    +---------------------+-----------------+-----------------+------------------------------------------------------------------------------------------------------------------------------------------+
    | admin_state_up      | No              | Boolean         | -  Specifies whether the SNAT rule is enabled or disabled.                                                                               |
-   |                     |                 |                 | -  The value can be:                                                                                                                     |
+   |                     |                 |                 | -  The state can be:                                                                                                                     |
    |                     |                 |                 |                                                                                                                                          |
    |                     |                 |                 |    -  **true**: The SNAT rule is enabled.                                                                                                |
    |                     |                 |                 |    -  **false**: The SNAT rule is disabled.                                                                                              |
@@ -70,7 +72,7 @@ Response
 
 .. _nat_api_0007__table25574495:
 
-.. table:: **Table 2** Response parameters
+.. table:: **Table 2** Response parameter
 
    +------------+-------------------+-----------------------------------------------------------------------------------------------------+
    | Parameter  | Type              | Description                                                                                         |
@@ -101,18 +103,23 @@ Response
    |                       |                       |                                                                                                                                          |
    |                       |                       | If no value is entered, the default value **0** (VPC) is used.                                                                           |
    +-----------------------+-----------------------+------------------------------------------------------------------------------------------------------------------------------------------+
-   | floating_ip_id        | String(4096)          | -  Specifies the EIP ID. Multiple EIPs are separated using commas (,).                                                                   |
-   |                       |                       | -  The maximum length of the ID is 4096 bytes.                                                                                           |
-   |                       |                       | -  The number of EIP IDs cannot exceed 20.                                                                                               |
+   | floating_ip_id        | String(4096)          | -  Specifies the EIP ID. Use commas (,) to separate multiple IDs.                                                                        |
+   |                       |                       | -  The maximum length of the ID is 4,096 bytes.                                                                                          |
+   |                       |                       | -  Constraints: The number of EIP IDs cannot exceed 20.                                                                                  |
    +-----------------------+-----------------------+------------------------------------------------------------------------------------------------------------------------------------------+
-   | floating_ip_address   | String(1024)          | -  Specifies the EIP. Multiple EIPs are separated using commas (,).                                                                      |
-   |                       |                       | -  The maximum length is 1024 bytes.                                                                                                     |
+   | floating_ip_address   | String(1024)          | -  Specifies the EIP. Use commas (,) to separate multiple EIPs.                                                                          |
+   |                       |                       | -  The maximum length is 1,024 bytes.                                                                                                    |
+   +-----------------------+-----------------------+------------------------------------------------------------------------------------------------------------------------------------------+
+   | freezed_ip_address    | String(1024)          | -  Specifies the frozen EIP. Use commas (,) to separate frozen EIPs.                                                                     |
+   |                       |                       | -  The maximum length is 1,024 bytes.                                                                                                    |
+   +-----------------------+-----------------------+------------------------------------------------------------------------------------------------------------------------------------------+
+   | description           | String(255)           | Provides supplementary information about the SNAT rule.                                                                                  |
    +-----------------------+-----------------------+------------------------------------------------------------------------------------------------------------------------------------------+
    | status                | String                | -  Specifies the status of the SNAT rule.                                                                                                |
    |                       |                       | -  For details about all its values, see :ref:`Table 1 <nat_api_0042__table1390614366107>`.                                              |
    +-----------------------+-----------------------+------------------------------------------------------------------------------------------------------------------------------------------+
    | admin_state_up        | Boolean               | -  Specifies whether the SNAT rule is enabled or disabled.                                                                               |
-   |                       |                       | -  The value can be:                                                                                                                     |
+   |                       |                       | -  The state can be:                                                                                                                     |
    |                       |                       |                                                                                                                                          |
    |                       |                       |    -  **true**: The SNAT rule is enabled.                                                                                                |
    |                       |                       |    -  **false**: The SNAT rule is disabled.                                                                                              |
@@ -146,7 +153,9 @@ Examples
                   "tenant_id": "abc",
                   "created_at": "2017-11-15 15:44:42.595173",
                   "id": "79195d50-0271-41f1-bded-4c089b2502ff",
-                  "floating_ip_address": "5.21.11.242"
+                  "floating_ip_address": "5.21.11.242",
+                  "freezed_ip_address": "",
+                  "description": "description"
               },
               {
                   "floating_ip_id": "6e496fba-abe9-4f5e-9406-2ad8c809ac8c",
@@ -159,12 +168,14 @@ Examples
                   "tenant_id": "abc",
                   "created_at": "2017-11-17 07:43:44.830845",
                   "id": "4a1a10d7-0d9f-4846-8cda-24cffeffef5c",
-                  "floating_ip_address": "5.21.11.142"
+                  "floating_ip_address": "5.21.11.142",
+                  "freezed_ip_address": "",
+                  "description": "description"
               }
           ]
       }
 
-Status Code
------------
+Status Codes
+------------
 
 See :ref:`Status Codes <nat_api_0038>`.
