@@ -9,11 +9,11 @@ The NAT Gateway service has the following highlights:
 
 -  Flexibility
 
-   A NAT gateway can be deployed flexibly across subnets and AZs. Any fault in a single AZ does not affect the service continuity of a NAT gateway. The type and EIP of a NAT gateway can be adjusted at any time.
+   A NAT gateway is deployed across subnets and across two AZs. Any fault in a single AZ does not affect the service continuity of a NAT gateway. The specifications and EIP of a NAT gateway can be adjusted at any time.
 
 -  Easy of use
 
-   Multiple types of NAT gateways are available. You can use them after simple configuration. NAT Gateway supports easy operation and maintenance (O&M) and quick provisioning. They can run stably and reliably.
+   Multiple NAT gateway specifications are available. You can use them after simple configuration. NAT Gateway supports easy operation and maintenance (O&M) and quick provisioning. They can run stably and reliably.
 
 -  Cost-effectiveness
 

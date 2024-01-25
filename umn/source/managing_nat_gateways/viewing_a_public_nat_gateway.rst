@@ -2,8 +2,8 @@
 
 .. _nat_nat_0001:
 
-Viewing a NAT Gateway
-=====================
+Viewing a Public NAT Gateway
+============================
 
 Scenarios
 ---------

@@ -2,8 +2,8 @@
 
 .. _nat_nat_0002:
 
-Deleting a NAT Gateway
-======================
+Deleting a Public NAT Gateway
+=============================
 
 Scenarios
 ---------

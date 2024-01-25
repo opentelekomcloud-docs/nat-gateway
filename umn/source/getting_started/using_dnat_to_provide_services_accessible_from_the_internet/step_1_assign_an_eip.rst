@@ -13,4 +13,4 @@ Assign an EIP and enable servers in a VPC to provide services accessible from th
 Procedure
 ---------
 
-For details, see the *Elastic IP User Guide*. After you assign an EIP, you do not need to bind it to a server here.
+For details, see `Assigning an EIP <https://docs.otc.t-systems.com/elastic-ip/umn/>`__. After obtaining the EIP, you do not need to bind it to a server.

@@ -24,7 +24,7 @@ Procedure
 
 #. Click |image1| in the upper left corner and select the desired region and project.
 
-#. Under **Network**, choose **NAT Gateway**.
+#. Under **Network**, select **NAT Gateway**.
 
 #. On the displayed page, click the name of the NAT gateway for which you want to add the DNAT rule.
 
@@ -33,7 +33,7 @@ Procedure
 #. Click **Add DNAT Rule**.
 
 
-   .. figure:: /_static/images/en-us_image_0201532948.png
+   .. figure:: /_static/images/en-us_image_0000001576425382.png
       :alt: **Figure 1** Add DNAT Rule
 
       **Figure 1** Add DNAT Rule
@@ -68,9 +68,19 @@ Procedure
       +-----------------------------------+---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
       | Private IP Address                | The IP address of the server in the local data center or the user's private IP address. With DNAT, a server using this private IP address in your data center that is connected to a VPC through Direct Connect or VPN can provide services accessible from the Internet. |
       +-----------------------------------+---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+      | Instance Type                     | The type of the instance that will be providing services accessible from on-premises data centers or remote VPCs. Possible values are:                                                                                                                                    |
+      |                                   |                                                                                                                                                                                                                                                                           |
+      |                                   | -  **Server**                                                                                                                                                                                                                                                             |
+      |                                   | -  **Virtual IP address**                                                                                                                                                                                                                                                 |
+      |                                   | -  **Custom**                                                                                                                                                                                                                                                             |
+      +-----------------------------------+---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+      | NIC                               | The NIC of the server. This parameter is available when you set **Instance Type** to **Server**.                                                                                                                                                                          |
+      +-----------------------------------+---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
       | Inside Port                       | The port of the server that provides services accessible from the Internet through the DNAT rule. This parameter is available if you select **Specific port** for **Port Type**. The value ranges from 1 to 65535.                                                        |
       |                                   |                                                                                                                                                                                                                                                                           |
       |                                   | You can enter a single port number, for example, 80.                                                                                                                                                                                                                      |
+      +-----------------------------------+---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+      | Description                       | Supplementary information about the DNAT rule. The description can contain up to 255 characters.                                                                                                                                                                          |
       +-----------------------------------+---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
 
 #. Click **OK**.
