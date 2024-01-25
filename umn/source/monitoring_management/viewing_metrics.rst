@@ -9,7 +9,7 @@ Prerequisites
 -------------
 
 -  The NAT gateway is running properly and SNAT rules have been created.
--  It can take a period of time to obtain and transfer the monitoring data. Wait for a while and then check the data.
+-  It takes some time to obtain and transfer the monitoring data. Wait for a while and then check the data.
 
 Scenarios
 ---------

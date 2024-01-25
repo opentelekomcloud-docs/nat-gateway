@@ -28,7 +28,7 @@ Procedure
 
 #. On the NAT gateway details page, click the **DNAT Rules** tab.
 
-#. Locate the row that contains the DNAT rule you want to modify and click **Modify** in the **Operation** column.
+#. Locate the DNAT rule you want to modify and click **Modify** in the **Operation** column.
 
 #. In the displayed dialog box, modify the required parameters.
 

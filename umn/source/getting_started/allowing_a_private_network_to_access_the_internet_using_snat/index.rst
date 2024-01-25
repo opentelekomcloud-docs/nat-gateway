@@ -2,8 +2,8 @@
 
 .. _nat_qs_0001:
 
-Using SNAT to Access the Internet
-=================================
+Allowing a Private Network to Access the Internet Using SNAT
+============================================================
 
 -  :ref:`Overview <en-us_topic_0087895790>`
 -  :ref:`Step 1: Assign an EIP <nat_qs_0002>`

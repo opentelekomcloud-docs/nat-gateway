@@ -8,7 +8,7 @@ Managing NAT Gateway Tags
 Application Scenarios
 ---------------------
 
-A NAT gateway tag identifies the NAT gateway. Tags can be added to NAT gateways to facilitate NAT gateway identification and administration. You can add a tag to a NAT gateway when creating the NAT gateway. Alternatively, you can add a tag to a created NAT gateway on the NAT gateway details page. A maximum of 20 tags can be added to each NAT gateway.
+A NAT gateway tag identifies the NAT gateway. Tags can be added to NAT gateways to ease NAT gateway identification and administration. You can add a tag to a NAT gateway when creating the NAT gateway. Alternatively, you can add a tag to a created NAT gateway on the NAT gateway details page. A maximum of 20 tags can be added to each NAT gateway.
 
 A tag consists of a key and value pair. :ref:`Table 1 <nat_tag_0000__ted9687ca14074ef785241145365a6175>` lists the tag key and value requirements.
 
