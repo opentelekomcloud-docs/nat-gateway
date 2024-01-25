@@ -55,7 +55,7 @@ Procedure
       |                                   |                                                                                                                                                                                                                                     |
       |                                   | You can select an EIP that either is not bound to any resource, has been bound to a DNAT rule with **Port Type** set to **Specific port** of the current NAT gateway, or has been bound to an SNAT rule of the current NAT gateway. |
       +-----------------------------------+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-      | Description                       | Supplementary information about the SNAT rule. The description can contain up to 255 characters.                                                                                                                                    |
+      | Description                       | Supplementary information about the SNAT rule. Enter up to 255 characters. Angle brackets (<>) are not allowed.                                                                                                                     |
       +-----------------------------------+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
 
 7. Click **OK**.

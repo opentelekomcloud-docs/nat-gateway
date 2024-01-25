@@ -2,8 +2,8 @@
 
 .. _nat_qs_0006:
 
-Using DNAT to Provide Services Accessible from the Internet
-===========================================================
+Allowing Internet Users to Access a Service in a Private Network Using DNAT
+===========================================================================
 
 -  :ref:`Overview <nat_qs_0007>`
 -  :ref:`Step 1: Assign an EIP <nat_qs_0008>`

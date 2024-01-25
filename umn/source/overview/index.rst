@@ -11,6 +11,7 @@ Overview
 -  :ref:`NAT Gateway Specifications <en-us_topic_0086739763>`
 -  :ref:`Notes and Constraints <en-us_topic_0086739750>`
 -  :ref:`Using NAT Gateway with Other Services <nat_pro_0003>`
+-  :ref:`Permissions <nat_permission_0000>`
 -  :ref:`Region and AZ <nat_az_0000>`
 -  :ref:`Basic Concepts <nat_pro_0004>`
 
@@ -24,5 +25,6 @@ Overview
    nat_gateway_specifications
    notes_and_constraints
    using_nat_gateway_with_other_services
+   permissions
    region_and_az
    basic_concepts

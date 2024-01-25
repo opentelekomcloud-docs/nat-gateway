@@ -19,7 +19,7 @@ Each EIP can be used by only one ECS at a time. If you want multiple ECSs in the
 SNAT Connections
 ----------------
 
-An SNAT connection consists of the source IP address, source port, destination IP address, destination port, and a transport-layer protocol. The source IP address is the EIP, and the source port is the EIP port. An SNAT connection uniquely identifies a session.
+An SNAT connection consists of the source IP address, source port, destination IP address, destination port, and a transport layer protocol. The source IP address is the EIP, and the source port is the EIP port. An SNAT connection uniquely identifies a session.
 
 DNAT Connections
 ----------------
