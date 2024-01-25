@@ -1,0 +1,15 @@
+diff a/zuul.yaml b/zuul.yaml	(rejected hunks)
+@@ -4,5 +4,9 @@
+     default-branch: main
+     templates:
+       - helpcenter-base-jobs
+-      - api-ref-hc-int-jobs
+-      - umn-hc-int-jobs
+\ No newline at end of file
++    check:
++      jobs:
++        - noop
++    gate:
++      jobs:
++        - noop
+\ No newline at end of file
