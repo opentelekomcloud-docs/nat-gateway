@@ -1,83 +1,51 @@
-:original_name: nat_api_0061.html
+:original_name: nat_api_0062.html
 
-.. _nat_api_0061:
+.. _nat_api_0062:
 
-Creating a NAT Gateway
-======================
+Querying Details of a NAT Gateway
+=================================
 
 Function
 --------
 
-This API is used to create a NAT gateway.
+This API is used to query details of a NAT gateway.
 
 URI
 ---
 
-POST /v2.0/nat_gateways
+GET /v2.0/nat_gateways/{nat_gateway_id}
+
+.. table:: **Table 1** Parameter description
+
+   ============== ========= ====== =============================
+   Parameter      Mandatory Type   Description
+   ============== ========= ====== =============================
+   nat_gateway_id Yes       String Specifies the NAT gateway ID.
+   ============== ========= ====== =============================
 
 Request
 -------
 
-:ref:`Table 1 <nat_api_0061__table531642713017>` describes the request parameter.
-
-.. _nat_api_0061__table531642713017:
-
-.. table:: **Table 1** Request parameter
-
-   +-------------+-----------+--------+--------------------------------------------------------------------------------------------------------+
-   | Parameter   | Mandatory | Type   | Description                                                                                            |
-   +=============+===========+========+========================================================================================================+
-   | nat_gateway | Yes       | Object | Specifies the NAT gateway object. For details, see :ref:`Table 2 <nat_api_0061__table93481227153014>`. |
-   +-------------+-----------+--------+--------------------------------------------------------------------------------------------------------+
-
-.. _nat_api_0061__table93481227153014:
-
-.. table:: **Table 2** Description of the **nat_gateway** field
-
-   +---------------------+-----------------+-----------------+----------------------------------------------------------------------------------------------------+
-   | Parameter           | Mandatory       | Type            | Description                                                                                        |
-   +=====================+=================+=================+====================================================================================================+
-   | tenant_id           | No              | String          | Specifies the project ID.                                                                          |
-   +---------------------+-----------------+-----------------+----------------------------------------------------------------------------------------------------+
-   | name                | Yes             | String(64)      | Specifies the NAT gateway name.                                                                    |
-   |                     |                 |                 |                                                                                                    |
-   |                     |                 |                 | The name can contain only digits, letters, underscores (_), and hyphens (-).                       |
-   +---------------------+-----------------+-----------------+----------------------------------------------------------------------------------------------------+
-   | description         | No              | String(255)     | Provides supplementary information about the NAT gateway.                                          |
-   +---------------------+-----------------+-----------------+----------------------------------------------------------------------------------------------------+
-   | spec                | Yes             | String          | Specifies the NAT gateway type.                                                                    |
-   |                     |                 |                 |                                                                                                    |
-   |                     |                 |                 | The type can be:                                                                                   |
-   |                     |                 |                 |                                                                                                    |
-   |                     |                 |                 | -  **0**: micro type, which supports up to 1,000 SNAT connections.                                 |
-   |                     |                 |                 | -  **1**: small type, which supports up to 10,000 SNAT connections.                                |
-   |                     |                 |                 | -  **2**: medium type, which supports up to 50,000 SNAT connections.                               |
-   |                     |                 |                 | -  **3**: large type, which supports up to 200,000 SNAT connections.                               |
-   |                     |                 |                 | -  **4**: extra-large type, which supports up to 1,000,000 SNAT connections.                       |
-   +---------------------+-----------------+-----------------+----------------------------------------------------------------------------------------------------+
-   | router_id           | Yes             | String          | Specifies the VPC ID.                                                                              |
-   +---------------------+-----------------+-----------------+----------------------------------------------------------------------------------------------------+
-   | internal_network_id | Yes             | String          | Specifies the network ID of the downstream interface (the next hop of the DVR) of the NAT gateway. |
-   +---------------------+-----------------+-----------------+----------------------------------------------------------------------------------------------------+
+None
 
 Response
 --------
 
-:ref:`Table 3 <nat_api_0061__table1899835483516>` lists response parameters.
+:ref:`Table 2 <nat_api_0062__table129831149144215>` lists response parameter.
 
-.. _nat_api_0061__table1899835483516:
+.. _nat_api_0062__table129831149144215:
 
-.. table:: **Table 3** Response parameter
+.. table:: **Table 2** Response parameter
 
-   +-------------+--------+-------------------------------------------------------------------------------------------------------+
-   | Parameter   | Type   | Description                                                                                           |
-   +=============+========+=======================================================================================================+
-   | nat_gateway | Object | Specifies the NAT gateway object. For details, see :ref:`Table 4 <nat_api_0061__table5998115418352>`. |
-   +-------------+--------+-------------------------------------------------------------------------------------------------------+
+   +-------------+--------+------------------------------------------------------------------------------------------------------+
+   | Parameter   | Type   | Description                                                                                          |
+   +=============+========+======================================================================================================+
+   | nat_gateway | Object | Specifies the NAT gateway object. For details, see :ref:`Table 3 <nat_api_0062__table514165011429>`. |
+   +-------------+--------+------------------------------------------------------------------------------------------------------+
 
-.. _nat_api_0061__table5998115418352:
+.. _nat_api_0062__table514165011429:
 
-.. table:: **Table 4** Description of the **nat_gateway** field
+.. table:: **Table 3** Description of the **nat_gateway** field
 
    +---------------------------+-----------------------+---------------------------------------------------------------------------------------------------------------------------------------------+
    | Parameter                 | Type                  | Description                                                                                                                                 |
@@ -92,9 +60,9 @@ Response
    +---------------------------+-----------------------+---------------------------------------------------------------------------------------------------------------------------------------------+
    | description               | String(255)           | Provides supplementary information about the NAT gateway.                                                                                   |
    +---------------------------+-----------------------+---------------------------------------------------------------------------------------------------------------------------------------------+
-   | spec                      | String                | Specifies the NAT gateway type.                                                                                                             |
+   | spec                      | String                | Specifies the NAT gateway specifications.                                                                                                   |
    |                           |                       |                                                                                                                                             |
-   |                           |                       | The type can be:                                                                                                                            |
+   |                           |                       | The value can be:                                                                                                                           |
    |                           |                       |                                                                                                                                             |
    |                           |                       | -  **0**: micro type, which supports up to 1,000 SNAT connections.                                                                          |
    |                           |                       |                                                                                                                                             |
@@ -111,7 +79,7 @@ Response
    |                           |                       | -  For details about all its values, see :ref:`Table 1 <nat_api_0042__table1390614366107>`.                                                 |
    +---------------------------+-----------------------+---------------------------------------------------------------------------------------------------------------------------------------------+
    | admin_state_up            | Boolean               | -  Specifies whether the NAT gateway is up or down.                                                                                         |
-   |                           |                       | -  The state can be:                                                                                                                        |
+   |                           |                       | -  The value can be:                                                                                                                        |
    |                           |                       |                                                                                                                                             |
    |                           |                       |    -  **true**: The NAT gateway is up.                                                                                                      |
    |                           |                       |    -  **false**: The NAT gateway is down.                                                                                                   |
@@ -136,16 +104,7 @@ Examples
 
    .. code-block:: text
 
-      POST https://{Endpoint}/v2.0/nat_gateways
-      {
-          "nat_gateway": {
-              "name": "nat_001",
-              "description": "my nat gateway 01",
-              "router_id": "d84f345c-80a1-4fa2-a39c-d0d397c3f09a",
-              "internal_network_id": "89d66639-aacb-4929-969d-07080b0f9fd9",
-              "spec": "1"
-          }
-      }
+      GET https://{Endpoint}/v2.0/nat_gateways/a78fb3eb-1654-4710-8742-3fc49d5f04f8
 
 -  Example response
 
@@ -154,7 +113,7 @@ Examples
       {
           "nat_gateway": {
                "router_id": "d84f345c-80a1-4fa2-a39c-d0d397c3f09a",
-               "status": "PENDING_CREATE",
+               "status": "ACTIVE",
                "description": "my nat gateway 01",
                "admin_state_up": true,
                "tenant_id": "27e25061336f4af590faeabeb7fcd9a3",

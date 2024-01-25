@@ -7,7 +7,7 @@ DNAT Rules
 
 -  :ref:`Creating a DNAT Rule <nat_api_0011>`
 -  :ref:`Querying DNAT Rules <nat_api_0012>`
--  :ref:`Querying Details About a Specified DNAT Rule <nat_api_0013>`
+-  :ref:`Querying Details of a DNAT Rule <nat_api_0013>`
 -  :ref:`Deleting a DNAT Rule <nat_api_0014>`
 
 .. toctree::
@@ -16,5 +16,5 @@ DNAT Rules
 
    creating_a_dnat_rule
    querying_dnat_rules
-   querying_details_about_a_specified_dnat_rule
+   querying_details_of_a_dnat_rule
    deleting_a_dnat_rule

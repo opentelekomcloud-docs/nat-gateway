@@ -2,13 +2,13 @@
 
 .. _nat_api_0026:
 
-Querying a Specified API Version
-================================
+Querying an API Version
+=======================
 
 Function
 --------
 
-This API is used to query a specified API version of NAT Gateway.
+This API is used to query an API version of NAT Gateway.
 
 URI
 ---
@@ -86,7 +86,7 @@ Examples
        }
    }
 
-Status Code
------------
+Status Codes
+------------
 
 See :ref:`Status Codes <nat_api_0038>`.
