@@ -110,7 +110,7 @@ html_copy_source = False
 latex_documents = [
     ('index',
      'natgw-umn.tex',
-     u'NAT Gateway - User Guide',
+    u'NAT Gateway - User Guide',
      u'OpenTelekomCloud', 'manual'),
 ]
 
