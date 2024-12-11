@@ -110,7 +110,7 @@ html_copy_source = False
 latex_documents = [
     ('index',
      'natgw-best-practice.tex',
-     u'NAT Gateway - Best Practice',
+    u'NAT Gateway - Best Practice',
      u'OpenTelekomCloud', 'manual'),
 ]
 

@@ -110,7 +110,7 @@ html_copy_source = False
 latex_documents = [
     ('index',
      'natgw-api-ref.tex',
-     u'NAT Gateway - API Reference',
+    u'NAT Gateway - API Reference',
      u'OpenTelekomCloud', 'manual'),
 ]
 
