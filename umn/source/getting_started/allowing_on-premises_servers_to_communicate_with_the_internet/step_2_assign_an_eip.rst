@@ -8,9 +8,11 @@ Step 2: Assign an EIP
 Scenarios
 ---------
 
-You can assign an EIP, which can work together with a NAT gateway to allow servers that are connected to a public cloud system using Direct Connect or VPN to access the Internet or to provide services accessible from the Internet.
+Buy an EIP for a NAT gateway to allow servers that are connected to the cloud using Direct Connect to communicate with the Internet.
 
 Procedure
 ---------
 
-For details, see `Assigning an EIP <https://docs.otc.t-systems.com/elastic-ip/umn/>`__. After obtaining the EIP, you do not need to bind it to a server.
+For details, see `Assigning an EIP <https://docs.otc.t-systems.com/elastic-ip/umn/elastic_ip/assigning_an_eip_and_binding_it_to_an_ecs.html>`__. After obtaining the EIP, you do not need to bind it to a server.
+
+You do not need to bind the EIP to any server.
