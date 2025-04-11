@@ -5,14 +5,14 @@
 FAQs
 ====
 
--  :ref:`NAT Gateway <nat_faq_0100>`
--  :ref:`SNAT <nat_faq_0200>`
--  :ref:`DNAT <nat_faq_0300>`
+-  :ref:`Public NAT Gateways <nat_faq_0100>`
+-  :ref:`SNAT Rules <nat_faq_0200>`
+-  :ref:`DNAT Rules <nat_faq_0300>`
 
 .. toctree::
    :maxdepth: 1
    :hidden: 
 
-   nat_gateway/index
-   snat/index
-   dnat/index
+   public_nat_gateways/index
+   snat_rules/index
+   dnat_rules/index
