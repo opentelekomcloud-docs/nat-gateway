@@ -5,14 +5,15 @@ NAT Gateway - User Guide
 .. toctree::
    :maxdepth: 1
 
-   overview/index
+   service_overview/index
    getting_started/index
-   managing_nat_gateways/index
-   managing_snat_rules/index
-   managing_dnat_rules/index
+   public_nat_gateways/index
+   private_nat_gateways/index
    permissions_management/index
-   managing_nat_gateway_tags
-   monitoring_management/index
+   tag_management
+   managing_quotas
+   monitoring/index
+   auditing/index
    faqs/index
    change_history
    glossary
