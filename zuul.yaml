@@ -6,8 +6,9 @@
       - helpcenter-base-jobs
     vars:
       sphinx_pdf_files:
-        - natgw-api-ref.pdf
         - natgw-umn.pdf
+        - natgw-api-ref.pdf
+        - natgw-best-practice.pdf
     check:
       jobs:
         - noop
